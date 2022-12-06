@@ -1,0 +1,288 @@
+@charset "utf-8"; 
+body{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(223, 219, 219, 0.294);
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/* header */
+
+#header{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 30px auto 40px;
+  max-width: 800px;
+}
+
+
+#header .header_left{
+  box-sizing: border-box;
+  width: 250px;
+  /* height: 70px; */
+  align-items: center;
+  text-align: center;
+}
+#header .header_left img{
+  width: 250px;
+
+}
+
+#header .header_left p{
+  padding-top: 10px;
+}
+
+#header .header_right {
+  box-sizing: border-box;
+}
+#header .header_right ol{
+  width: 100%;
+  display: flex;
+}
+#header .header_right ol li{
+  padding-right: 20px;
+}
+#header .header_right ol li a:hover{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* h1 */
+
+.h1{
+  margin-bottom: 80px;
+  text-align: center;
+  width: 100%;
+  font-size: 3.125rem;
+  font-weight: bold;
+}
+
+/* president */
+.president{
+  width: 100%;
+  margin-bottom: 100px;
+  animation-name: fade;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+@keyframes fade{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.president .flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.president .img{
+  width: 50%;
+}
+.president .text{
+  box-sizing: border-box;
+  text-align: center;
+  width: 50%;
+  padding: 0 30px;
+}
+
+/* テキストタイピングCSS */
+
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+ 	content: "|";
+	animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime{
+	from{opacity:0}
+	to{opacity:1}
+}
+/* .president .text p{
+  margin-bottom: 10px;
+} */
+.president .text p+p{
+  text-align: right;
+}
+
+/* company */
+.company{
+  max-width: 800px;
+  margin: 0 auto 100px;
+}
+
+.company h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.company dl{
+  padding: 40px 0;
+  border-top: 1px dotted black;
+}
+.company dl:last-child{
+  border-bottom: 1px dotted black;
+}
+.company dt{
+  float: left;
+}
+.company dd{
+  padding-left: 200px;
+}
+
+/* map */
+
+.map{
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto 80px;
+}
+.map iframe{
+  width: 100%;
+}
+
+
+/* footer */
+
+#footer{
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  padding-bottom: 10px;
+  color: white;
+}
+
+#footer .footer_both{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+
+
+#footer .footer_left{
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
+  align-items: center;
+  text-align: left;
+}
+#footer .footer_left li{
+  font-size: 0.8rem;
+}
+
+#footer .footer_right {
+  box-sizing: border-box;
+}
+#footer .footer_right ol{
+  width: 100%;
+  display: flex;
+}
+#footer .footer_right ol li{
+  padding-right: 20px;
+  font-size: 0.8rem;
+}
+#footer .footer_right ol li a{
+  color: white;
+}
+#footer .footer_right ol li a:hover{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#footer p{
+  font-size: 0.5rem;
+  margin-top: 10px;
+}
+
+
+
+@media (max-width: 800px){
+  /* header */
+  #header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto 30px;
+    width: 100%;
+  }
+  #header .header_right {
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  #header .header_right ol li{
+    padding-right: 10px;
+  }
+
+  /* president */
+  .president{
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  
+  .president .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .president .img{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .president .text{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+  }
+
+  /* detail */
+  .detail dt{
+    padding-left: 20px;
+  }
+
+  
+  /* footer */
+  #footer .footer_both{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto 30px;
+    max-width: 800px;
+  }
+  #footer .footer_right {
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  #footer .footer_right ol li{
+    padding-right: 10px;
+  }
+
+  
+}

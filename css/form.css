@@ -1,0 +1,252 @@
+@charset "utf-8"; 
+body{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(223, 219, 219, 0.294);
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/* header */
+
+#header{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 30px auto 40px;
+  max-width: 800px;
+}
+
+
+#header .header_left{
+  box-sizing: border-box;
+  width: 250px;
+  /* height: 70px; */
+  align-items: center;
+  text-align: center;
+}
+#header .header_left img{
+  width: 250px;
+
+}
+
+#header .header_left p{
+  padding-top: 10px;
+}
+
+#header .header_right {
+  box-sizing: border-box;
+}
+#header .header_right ol{
+  width: 100%;
+  display: flex;
+}
+#header .header_right ol li{
+  padding-right: 20px;
+}
+#header .header_right ol li a:hover{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* h1 */
+
+.h1{
+  margin-bottom: 80px;
+  text-align: center;
+  width: 100%;
+  font-size: 3.125rem;
+  font-weight: bold;
+}
+
+
+.form {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.form-item{
+  margin-bottom: 60px;
+}
+.form-item-label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.02rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.form-item-label p{
+  padding-bottom: 2px;
+}
+.form-item-label.isMsg {
+  margin-top: 10px;
+  margin-bottom: auto;
+}
+.form-item-label-required {
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  color: red;
+  font-size: 14px;
+}
+.form-item-input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 0 auto;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+
+.form-item-textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+
+.form-btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 1px 6px 4px rgba(0,0,0,0.3);
+}
+.form-btn:hover{
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+}
+
+/* footer */
+
+#footer{
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  padding-bottom: 10px;
+  color: white;
+}
+
+#footer .footer_both{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+
+
+#footer .footer_left{
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
+  align-items: center;
+  text-align: left;
+}
+#footer .footer_left li{
+  font-size: 0.8rem;
+}
+
+#footer .footer_right {
+  box-sizing: border-box;
+}
+#footer .footer_right ol{
+  width: 100%;
+  display: flex;
+}
+#footer .footer_right ol li{
+  padding-right: 20px;
+  font-size: 0.8rem;
+}
+#footer .footer_right ol li a{
+  color: white;
+}
+#footer .footer_right ol li a:hover{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#footer p{
+  font-size: 0.5rem;
+  margin-top: 10px;
+}
+
+
+
+@media (max-width: 800px){
+  /* header */
+  #header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto 30px;
+    width: 100%;
+  }
+  #header .header_right {
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  #header .header_right ol li{
+    padding-right: 10px;
+  }
+
+
+
+
+
+
+
+
+  /* footer */
+  #footer .footer_both{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto 30px;
+    max-width: 800px;
+  }
+  #footer .footer_right {
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  #footer .footer_right ol li{
+    padding-right: 10px;
+  }
+
+  
+}
